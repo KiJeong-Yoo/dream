@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon.png">
+    <title>Course Registration</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/materialpro/" />
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
+    <!-- table CSS -->
+    <link href="/css/table/tablesaw.css" rel="stylesheet">
+    <!-- input date type CSS -->
+    <link href="/css/bootstrap/daterangepicker.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="/css/color/green.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+</div>
+<div id="main-wrapper">
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-light">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="acm1_1.html">
+                    <!-- Logo icon -->
+                    <b><img src="/images/logo/logo-icon.png" alt="" width="45px" height="45px" class="light-logo" /></b>
+                    <!-- Logo -->
+                    <span><img src="/images/logo/logo-text.png" class="light-logo" width="139px" height="31px" alt="homepage" /></span>
+                </a>
+            </div>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav mr-auto mt-md-0">
+                    <!-- Academic -->
+                    <li class="nav-item"><a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark fs95Rem side_Academic" href="javascript:void(0)">Academic</a> </li>
+                    <li class="nav-item"><a class="nav-link nav-toggler hidden-sm-down text-muted waves-effect side_Academic" href="javascript:void(0)">Academic</a></li>
+                    <!-- faculty -->
+                    <li class="nav-item"><a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark fs95Rem side_Faculty" href="javascript:void(0)">faculty</a> </li>
+                    <li class="nav-item"><a class="nav-link hidden-sm-down text-muted waves-effect side_Faculty" href="javascript:void(0)">faculty</a></li>
+
+                </ul>
+                <ul class="navbar-nav my-lg-0">
+                    <div class="userInfo navbar-collapse collapse">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-user hidden-sm-down"></i>
+                            <div class="userName">KDI Student ID <span class="hidden-sm-down">( freshman )</span></div>
+                        </a>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <aside class="left-sidebar">
+        <div class="scroll-sidebar">
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <!-- Faculty -->
+                    <li class="faculty">
+                        <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-led-on"></i><span class="hide-menu">교원연구관리</span></a>
+                        <ul class="collapse" aria-expanded="false">
+                            <li><a href="fclty7_1.html">연구과제 현황 조회</a></li>
+                            <li><a href="fclty7_2.html">연구과제 신청내역</a></li>
+                            <li><a href="fclty7_3.html">신규연구과제 신청</a></li>
+                            <li><a href="fclty7_4.html">평가대상 연구과제 현황</a></li>
+                            <li><a href="fclty7_5.html">평가위원 평가결과 등록</a></li>
+                            <li><a href="fclty7_6.html">발표회 신청</a></li>
+                            <li><a href="fclty7_7.html">연구과제 변경 신청</a></li>
+                            <li><a href="fclty7_8.html">연구과제 종료 신청</a></li>
+                            <li><a href="fclty7_9.html">연구과제 중도포기 신청</a></li>
+                            <li><a href="fclty7_10.html">워킹페이퍼 제작 신청</a></li>
+                            <li><a href="fclty7_11.html">워킹페이퍼 평가위원 선정</a></li>
+                            <li><a href="fclty7_12.html">워킹페이퍼 평가결과 등록</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar-footer">
+            <a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
+            <a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
+        </div>
+    </aside>
+    <div class="page-wrapper">
+        <div class="container-fluid">
+            <div class="row page-titles position-relative">
+                <div class="col-md-7 col-10 align-self-center">
+                    <h3 class="text-themecolor">연구과제 현황 조회</h3>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">교원 연구관리</a></li>
+                        <li class="breadcrumb-item active">연구과제 현황 조회</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="button-group">
+                        <button type="button" class="btn waves-effect waves-light btn-primary">조회</button>
+                    </div>
+                    <p></p>
+                    <div class="card">
+                        <div class="card-body">
+                            <form class="form-material">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>PM</label>
+                                        <div class="row">
+                                            <div class="form-group col-lg-12">
+                                                <input type="text" class="form-control form-control-line" id="example-text-input" placeholder="" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>연구기간</label>
+                                        <div class="row">
+                                            <div class="input-group col-lg-12">
+                                                <input type="text" class="form-control daterange" value=""  />
+                                                <div class="input-group-append">
+                              <span class="input-group-text">
+                                  <span class="ti-calendar"></span>
+                              </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card card-outline-info">
+                        <div class="card-header">
+                            <h4 class="m-b-0 text-white">연구과제 현황</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive sf71_1">
+                                <table class="table table-bordered tbl-center table-striped table-nowrap">
+                                    <thead>
+                                    <tr>
+                                        <th>연구번호</th>
+                                        <th>연구명</th>
+                                        <th>연구시작일</th>
+                                        <th>연구종료일</th>
+                                        <th>승인예산</th>
+                                        <th>집행금액</th>
+                                        <th>상태</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>2020-01-01</td>
+                                        <td>2020-12-31</td>
+                                        <td class="price"></td>
+                                        <td class="price">15,000,000</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="price"></td>
+                                        <td class="price"></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="price"></td>
+                                        <td class="price"></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7">No Data has been found.</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card card-outline-info">
+                        <div class="card-header">
+                            <h4 class="m-b-0 text-white">연구비 지출현황</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive sf71_1">
+                                <table class="table table-bordered tbl-center table-striped table-nowrap">
+                                    <thead>
+                                    <tr>
+                                        <th>일자</th>
+                                        <th>계정과목</th>
+                                        <th>금액</th>
+                                        <th>적요</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="price"></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="price"></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="price"></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card card-outline-info">
+                        <div class="card-header">
+                            <h4 class="m-b-0 text-white">종료요건</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive sf71_1">
+                                <table class="table table-bordered tbl-center table-striped table-nowrap">
+                                    <thead>
+                                    <tr>
+                                        <th>요건</th>
+                                        <th>완료여부</th>
+                                        <th>기한</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer class="footer">© 2019</footer>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script src="/js/jquery.min.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="/js/bootstrap/popper.min.js"></script>
+<script src="/js/bootstrap/bootstrap.min.js"></script>
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="/js/material/slimscroll/jquery.slimscroll.js"></script>
+<!--Wave Effects -->
+<script src="/js/material/waves/waves.js"></script>
+<!--Menu sidebar -->
+<script src="/js/material/sidebar/sidebarmenu.js"></script>
+<!--stickey kit -->
+<script src="/js/material/sticky/sticky-kit.min.js"></script>
+<script src="/js/material/sticky/jquery.sparkline.min.js"></script>
+<!-- ============================================================== -->
+<!-- This page plugins -->
+<!-- ============================================================== -->
+<!-- DAY, DATE :: Plugin JavaScript -->
+<script src="/js/bootstrap/moment.js"></script>
+<script src="/js/bootstrap/bootstrap-material-datetimepicker.js"></script>
+<!-- CLOCK :: Plugin JavaScript -->
+<script src="/js/bootstrap/jquery-clockpicker.min.js"></script>
+<!-- Date Picker Plugin JavaScript -->
+<script src="/js/bootstrap/bootstrap-datepicker.min.js"></script>
+<!-- Date range Plugin JavaScript -->
+<script src="/js/bootstrap/bootstrap-timepicker.min.js"></script>
+<script src="/js/bootstrap/daterangepicker.js"></script>
+<!-- TABLE :: basic table -->
+<script src="/js/table/tablesaw.jquery.js"></script>
+<script src="/js/table/tablesaw-init.js"></script>
+<!--Custom JavaScript -->
+<script src="/js/custom.js"></script>
+<script type="text/javascript">
+    /*******************************************/
+    // Single Date Range Picker
+    /*******************************************/
+    $('.singledate').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true
+    });
+
+    /*******************************************/
+    // Basic Date Range Picker
+    /*******************************************/
+    $('.daterange').daterangepicker({
+        locale: {
+            format: 'YYYY-MM-DD'
+        }
+    });
+
+
+</script>
+</body>
+
+</html>
